@@ -1,15 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-album',
+  selector: 'album',
   templateUrl: './album.component.html',
   styleUrls: ['./album.component.css']
 })
 export class AlbumComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }
