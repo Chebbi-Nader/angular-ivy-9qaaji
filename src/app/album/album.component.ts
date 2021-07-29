@@ -7,11 +7,13 @@ import { AlbumService } from '../services/album.service';
   styleUrls: ['./album.component.css']
 })
 export class AlbumComponent implements OnInit {
-  albums: any[];
+  albums: Object[];
   constructor(private _albumServive: AlbumService) {}
 
   ngOnInit() {
-    this._albumServive.getAllAlbum().subscribe(data => (this.albums = data));
-    console.log(this.albums);
+    this._albumServive.getAllAlbum().subscribe(data => {
+      this.albums = data;
+      console.log('Result : ', this.albums);
+    });
   }
 }
